@@ -10,7 +10,7 @@ sync_router = APIRouter(
         dependencies=[Depends(check_content_type)]
         )
 
-@sync_router.post('/sync/sum',
+@sync_router.post('/sum',
           description="Perform a sum calculation of some numbers array",
           response_description="Calculated sum",
           ) 
