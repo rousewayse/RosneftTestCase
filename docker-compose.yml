@@ -36,8 +36,6 @@ services:
     environment:
       BROKER_URL: "pyamqp://rabbit/"
       RESULT_URL: "redis://redis/"
-      API_WORKERS: 1
-      API_PORT: 80
       DB: "pony"
       DB_USER: "postgres"
       DB_PASS: "x"
@@ -57,7 +55,7 @@ services:
       #Костыли -- они такие костыли)
       BROKER_URL: "pyamqp://rabbit/"
       RESULT_URL: "redis://redis/"
-      API_WORKERS: 1
+      API_WORKERS: 2
       API_PORT: 80
       DB: "pony"
       DB_USER: "postgres"
