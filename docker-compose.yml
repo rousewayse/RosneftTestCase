@@ -43,7 +43,9 @@ services:
       DB_PASS: "x"
       DB_PORT: "5432"
       DB_HOST: "postgres"
-
+    deploy:
+      mode: replicated
+      replicas: 2
   api:
     build: 
       context: .
