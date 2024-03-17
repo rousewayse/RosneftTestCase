@@ -1,0 +1,9 @@
+FROM python:3.11.6
+
+WORKDIR /app
+
+#COPY ./requirements.txt .
+COPY . .
+RUN pip install -r requirements.txt
+
+CMD ["/bin/sh", "-c", "gunicorn api:app --bind 0.0.0.0:$API_PORT -w $API_WORKERS --worker-class uvicorn.workers.UvicornWorker" ]
